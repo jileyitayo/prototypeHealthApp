@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- my new colors-->
+    <color name="background">#4374c2</color>
+    <color name="secondaryBackground">#e7e7e7</color>
+    <color name="secondaryBackground2">#fefefe</color>
+    <color name="secondaryBackground3">#3f6eb7</color>
+    <color name="foreground_material_light">#000000</color>
+    <color name="primary_text_default_material_light">#deffffff</color>
+    <color name="black">#ffffff</color>
+    <color name="background_material_light">#ffffff</color>
+    <color name="textColorPrimary">#2890cc</color>
+
+    <!-- other colors-->
+
+</resources>

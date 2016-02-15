@@ -14,15 +14,15 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.jil.myproject_prototype2sqlite.fragment_one;
-import com.example.jil.myproject_prototype2sqlite.fragment_two;
-import com.example.jil.myproject_prototype2sqlite.fragment_three;
-import com.example.jil.myproject_prototype2sqlite.fragment_four;
-import com.example.jil.myproject_prototype2sqlite.fragment_five;
 public class toolbar10 extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private int[] tabIcons = {
+            R.drawable.ic_child_friendly_white_24dp,
+            R.drawable.ic_child_care_white_24dp,
+            R.drawable.ic_laptop_windows_white_24dp
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class toolbar10 extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-
+        setupTabIcons();
     }
 
     @Override
@@ -56,6 +56,13 @@ public class toolbar10 extends AppCompatActivity {
 
 
     //my custom methods
+
+    //this setups the tabIcons
+    private void setupTabIcons() {
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+    }
 
     //this setups the view pager
     public void setupViewPager(ViewPager viewPager)
@@ -95,7 +102,8 @@ public class toolbar10 extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return mFragmentTitleList.get(position);
+            //return mFragmentTitleList.get(position);
+            return null;
         }
     }
 }

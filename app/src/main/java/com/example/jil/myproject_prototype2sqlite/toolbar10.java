@@ -19,18 +19,6 @@ public class toolbar10 extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ToggleButton newSwitch = (ToggleButton) findViewById(R.id.toggleButton);
-        newSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    setTheme(R.style.AppTheme_NoActionBar_Green);
-                }
-                else {
-                    setTheme(R.style.AppTheme_NoActionBar_Blue);
-                }
-            }
-        });
     }
 
     @Override

@@ -35,5 +35,11 @@
     <!-- Strings related to signup -->
     <string name="confirm_password">Confirm Password</string>
     <string name="signup_message">Already have an account? Sign in</string>
-
+    
+    <!-- Fragments -->
+    <string name="one">one</string>
+    <string name="two">two</string>
+    <string name="three">three</string>
+    <string name="four">four</string>
+    <string name="five">five</string>
 </resources>

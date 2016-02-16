@@ -30,11 +30,5 @@
         <item name="android:textColorSecondary">#fff</item>
         <item name="android:textColorTertiary">#034f78</item>
     </style>
-    <style name="AppTheme.NoActionBar.LightBlue">
-        <item name="colorPrimary">#2196F3</item>
-        <item name="colorPrimaryDark">#1976D2</item>
-        <item name="android:textColorSecondary">#fff</item>
-        <item name="android:textColorTertiary">#034f78</item>
-    </style>
 
 </resources>

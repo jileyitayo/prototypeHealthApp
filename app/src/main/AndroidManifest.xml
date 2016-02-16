@@ -43,9 +43,18 @@
         </activity>
         <activity
             android:name=".toolbar10"
-            android:theme="@style/AppTheme.NoActionBar.LightBlue" >
+            android:theme="@style/AppTheme.NoActionBar.Blue" >
         </activity>
-
+        <activity android:name=".fragment_one" >
+        </activity>
+        <activity android:name=".fragment_two" >
+        </activity>
+        <activity android:name=".fragment_three" >
+        </activity>
+        <activity android:name=".fragment_four" >
+        </activity>
+        <activity android:name=".fragment_five" >
+        </activity>
     </application>
 
 </manifest>

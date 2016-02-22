@@ -47,5 +47,6 @@
     <string name="action_refresh">Settings</string>
     <string name="action_new">Settings</string>
     <string name="logo_desc">App logo</string>
-    <string name="country_name">Nigeria</string>
+    <string name="activity">Add User</string>
+    <string name="descriptions">You are able to add your users here</string>
 </resources>

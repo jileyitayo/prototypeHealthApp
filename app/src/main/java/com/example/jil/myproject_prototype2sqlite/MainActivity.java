@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity
         toolbar.setLogoDescription(getResources().getString(R.string.logo_desc));
 
         List<ItemObject> rowListItem = getAllItemList();
-        lLayout = new GridLayoutManager(MainActivity.this, 4);
+
+        //1 determines the number of grid on a row
+        lLayout = new GridLayoutManager(MainActivity.this, 1);
 
         RecyclerView rView = (RecyclerView)findViewById(R.id.recycler_view);
         rView.setHasFixedSize(true);
@@ -132,9 +134,9 @@ public class MainActivity extends AppCompatActivity
     private List<ItemObject> getAllItemList(){
 
         List<ItemObject> allItems = new ArrayList<ItemObject>();
-        allItems.add(new ItemObject("United States", R.drawable.one));
-        allItems.add(new ItemObject("Canada", R.drawable.two));
-        allItems.add(new ItemObject("United Kingdom", R.drawable.three));
+        allItems.add(new ItemObject("United States", R.drawable.child_baby));
+        allItems.add(new ItemObject("Canada", R.drawable.african_american_children));
+        allItems.add(new ItemObject("United Kingdom", R.drawable.black_mother_child_healthcare_doctor));
         allItems.add(new ItemObject("Germany", R.drawable.four));
         allItems.add(new ItemObject("Sweden", R.drawable.five));
         allItems.add(new ItemObject("United Kingdom", R.drawable.six));

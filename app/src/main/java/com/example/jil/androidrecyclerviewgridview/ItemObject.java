@@ -4,6 +4,7 @@ public class ItemObject {
 
     private String name;
     private int photo;
+    private String description;
 
     public ItemObject(String name, int photo) {
         this.name = name;

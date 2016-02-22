@@ -42,4 +42,10 @@
     <string name="three">three</string>
     <string name="four">four</string>
     <string name="five">five</string>
+
+    <!-- Recycler View-->
+    <string name="action_refresh">Settings</string>
+    <string name="action_new">Settings</string>
+    <string name="logo_desc">App logo</string>
+    <string name="country_name">Nigeria</string>
 </resources>

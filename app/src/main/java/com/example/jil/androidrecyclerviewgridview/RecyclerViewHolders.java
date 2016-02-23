@@ -10,18 +10,20 @@ import com.example.jil.myproject_prototype2sqlite.R;
 
 public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-    public TextView countryName;
-    public ImageView countryPhoto;
+    public TextView activityName;
+    public ImageView activitypic;
+    public TextView activityDesc;
 
     public RecyclerViewHolders(View itemView) {
         super(itemView);
         itemView.setOnClickListener(this);
-        countryName = (TextView)itemView.findViewById(R.id.activity);
-        countryPhoto = (ImageView)itemView.findViewById(R.id.country_photo);
+        activityName = (TextView)itemView.findViewById(R.id.activity);
+        activitypic = (ImageView)itemView.findViewById(R.id.userPix);
+        activityDesc = (TextView)itemView.findViewById(R.id.description);
     }
 
     @Override
     public void onClick(View view) {
-        Toast.makeText(view.getContext(), "Clicked Country Position = " + getPosition(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(view.getContext(), "Clicked activity Position = " + getPosition(), Toast.LENGTH_SHORT).show();
     }
 }

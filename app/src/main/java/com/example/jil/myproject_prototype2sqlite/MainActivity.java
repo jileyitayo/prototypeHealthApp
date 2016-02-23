@@ -133,23 +133,12 @@ public class MainActivity extends AppCompatActivity
 
     private List<ItemObject> getAllItemList(){
 
+        String[] descriptions = {"You can add a new child here", "You can edit your child here", "You can communicate with your doctor"};
         List<ItemObject> allItems = new ArrayList<ItemObject>();
-        allItems.add(new ItemObject("United States", R.drawable.child_baby));
-        allItems.add(new ItemObject("Canada", R.drawable.african_american_children));
-        allItems.add(new ItemObject("United Kingdom", R.drawable.black_mother_child_healthcare_doctor));
-        allItems.add(new ItemObject("Germany", R.drawable.four));
-        allItems.add(new ItemObject("Sweden", R.drawable.five));
-        allItems.add(new ItemObject("United Kingdom", R.drawable.six));
-        allItems.add(new ItemObject("Germany", R.drawable.seven));
-        allItems.add(new ItemObject("Sweden", R.drawable.eight));
-        allItems.add(new ItemObject("United States", R.drawable.one));
-        allItems.add(new ItemObject("Canada", R.drawable.two));
-        allItems.add(new ItemObject("United Kingdom", R.drawable.three));
-        allItems.add(new ItemObject("Germany", R.drawable.four));
-        allItems.add(new ItemObject("Sweden", R.drawable.five));
-        allItems.add(new ItemObject("United Kingdom", R.drawable.six));
-        allItems.add(new ItemObject("Germany", R.drawable.seven));
-        allItems.add(new ItemObject("Sweden", R.drawable.eight));
+        allItems.add(new ItemObject("Add Child", R.drawable.child_baby, descriptions[0]));
+        allItems.add(new ItemObject("Manage Child", R.drawable.african_american_children, descriptions[1]));
+        allItems.add(new ItemObject("Contact Doctor", R.drawable.black_mother_child_healthcare_doctor, descriptions[2]));
+
 
         return allItems;
     }

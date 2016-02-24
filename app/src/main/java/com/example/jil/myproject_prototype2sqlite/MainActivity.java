@@ -3,6 +3,8 @@ package com.example.jil.myproject_prototype2sqlite;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -14,8 +16,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.jil.androidrecyclerviewgridview.ItemObject;
+import com.example.jil.androidrecyclerviewgridview.RecyclerViewAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private GridLayoutManager lLayout;
 
 
     @Override
@@ -27,6 +37,24 @@ public class MainActivity extends AppCompatActivity
         Log.e("error?", "check here too");
         setSupportActionBar(toolbar);
         Log.e("error?", "this too");
+
+
+        setTitle(null);
+        toolbar.setLogo(R.drawable.logo);
+        toolbar.setLogoDescription(getResources().getString(R.string.logo_desc));
+
+        List<ItemObject> rowListItem = getAllItemList();
+
+        //1 determines the number of grid on a row
+        lLayout = new GridLayoutManager(MainActivity.this, 1);
+
+        RecyclerView rView = (RecyclerView)findViewById(R.id.recycler_view);
+        rView.setHasFixedSize(true);
+        rView.setLayoutManager(lLayout);
+
+        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(MainActivity.this, rowListItem);
+        rView.setAdapter(rcAdapter);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -101,5 +129,17 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private List<ItemObject> getAllItemList(){
+
+        String[] descriptions = {"You can add a new child here", "You can edit your child here", "You can communicate with your doctor"};
+        List<ItemObject> allItems = new ArrayList<ItemObject>();
+        allItems.add(new ItemObject("Add Child", R.drawable.child_baby, descriptions[0]));
+        allItems.add(new ItemObject("Manage Child", R.drawable.african_american_children, descriptions[1]));
+        allItems.add(new ItemObject("Contact Doctor", R.drawable.black_mother_child_healthcare_doctor, descriptions[2]));
+
+
+        return allItems;
     }
 }
